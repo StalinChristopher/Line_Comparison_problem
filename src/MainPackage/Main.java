@@ -21,11 +21,17 @@ public class Main {
 		Double l1obj=l1;
 		Double l2obj=l2;
 		
-		//Using .equals method from java
-		if(l1obj.equals(l2obj))
-			System.out.println("Line l1 is equal to line l2");
-		else
-			System.out.println("Line l1 is not equal to line l2");
+		//Using java compareTo method to compare the length of the two lines
+		int compareVal=l1obj.compareTo(l2obj);
+		if(compareVal<0) {
+			System.out.println("Length of line l1 is less than line l2");
+		}
+		else if(compareVal>0) {
+			System.out.println("Length of line l1 is greater than line l2");
+		}
+		else {
+			System.out.println("Length of line l1 is equal to line l2");
+		}
 	}
 
 }
